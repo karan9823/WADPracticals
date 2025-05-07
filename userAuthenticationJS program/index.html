@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple JS Auth Demo</title>
+</head>
+<body>
+  <h1>Welcome to the Auth Demo</h1>
+  <button id="loginBtn">Log In</button>
+
+  <script>
+    // Simple Client-Side User Authentication in Plain JavaScript
+
+    // Predefined user credentials (for demo purposes)
+    const validUsername = 'user123';
+    const validPassword = 'pass123';
+
+    // Function to handle login
+    function login() {
+      const username = prompt('Enter your username:');
+      const password = prompt('Enter your password:');
+
+      if (username === validUsername && password === validPassword) {
+        alert('Login successful! Welcome, ' + username + '.');
+      } else {
+        alert('Invalid credentials. Please try again.');
+      }
+    }
+
+    // Hook it up to the button
+    document.getElementById('loginBtn').addEventListener('click', login);
+  </script>
+</body>
+</html>
